@@ -1,15 +1,22 @@
 import React from "react"
-
+import "./App.css"
 import Home from "./Home"
 import Content from "./Content"
-import Tp from "./Tp"
+
+import Sidebar from "./components/Sidebar"
+import MainDash from "./components/MainDash/MainDash.jsx"
 function Layout()
 {
     return(
         <>
-            <Home/>
-            <Content/>
-            <Tp/>
+        <div className="App">
+        <div className="AppGlass">
+    
+            <Sidebar/>
+            <MainDash/>
+    
+        </div>
+        </div>
         </>
     );
 }
