@@ -55,7 +55,7 @@ function ExpandedCard({ param, setExpanded }) {
   const data = {
     options: {
       chart: {
-        type: "area",
+        type: "line",
         height: "auto",
       },
 
@@ -77,7 +77,7 @@ function ExpandedCard({ param, setExpanded }) {
         enabled: false,
       },
       stroke: {
-        curve: "smooth",
+        curve:"smooth",
         colors: ["white"],
       },
       tooltip: {

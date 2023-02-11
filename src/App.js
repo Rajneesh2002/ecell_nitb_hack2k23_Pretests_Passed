@@ -1,18 +1,19 @@
 import React from "react"
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  Route, Routes } from "react-router-dom";
 
 import './App.css'
-import MainDash from './components/MainDash/MainDash';
-import RightSide from './components/RigtSide/RightSide';
-import Sidebar from './components/Sidebar';
-import Layout from './Layout';
+import {Layout} from './Layout';
 
-import Ap from './components/Ap'
+import Sidebar from "./components/Sidebar"
+import MainDash from "./components/MainDash/MainDash.jsx"
+import Ap from './components/Ap';
+
 function App() {
   return (
     <>
     <Layout/>
     <Ap/>
+    
     </>
   );
 }

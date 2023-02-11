@@ -1,10 +1,11 @@
-import React from "react"
+import React from 'react'
 
-function Ap()
-{
-    return (
-        <h1>hii</h1>
-    );
+const Ap = () => {
+  return (
+    <div>
+      <h1>hiiii</h1>
+    </div>
+  )
 }
 
 export default Ap

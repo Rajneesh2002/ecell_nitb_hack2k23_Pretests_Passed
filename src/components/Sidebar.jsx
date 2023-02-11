@@ -5,7 +5,7 @@ import "./Sidebar.css";
 import { AppBar, Box, Toolbar, Typography, Button } from "@mui/material";
 import {
     UilBars,
-    UilSignOutAlt,
+    UilSignOutAlt,UilEstate
   } from "@iconscout/react-unicons";
 
 import Logo from "../images/1.png";
@@ -38,12 +38,11 @@ const Sidebar = () => {
     >
       {/* logo */}
       <div className="logo">
-        <img src={Logo} alt="logo" />
         <span>
           Training & Placement 
         </span>
       </div>
-
+   
       <div className="menu">
         {SidebarData.map((item, index) => {
           return (
