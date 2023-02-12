@@ -12,7 +12,6 @@
     box-shadow: none !important;
   }
   
-  /* radial bar */
   .radialBar {
     flex: 1 1;
     display: flex;
@@ -41,7 +40,6 @@
     font-weight: bold;
   }
   
-  /* sideDetail*/
   .detail {
     flex: 1;
     display: flex;
@@ -59,11 +57,10 @@
     font-size: 12px;
   }
   
-  /* ExpandedCard */
   .ExpandedCard {
     position: absolute;
     width: 60%;
-    height: 70vh;
+    height: 80vh;
     z-index: 9;
     left: 13rem;
     border-radius: 1rem;
@@ -73,6 +70,7 @@
     justify-content: space-around;
     padding: 1rem;
   }
+
   .ExpandedCard > span:nth-of-type(1) {
     color: white;
     font-size: 26px;
@@ -91,7 +89,7 @@
   @media screen and (max-width: 1200px) {
     .ExpandedCard {
       top: 2rem;
-      height: 45vh;
+      height: 50vh;
       left: 6rem;
     }
   }
@@ -99,8 +97,8 @@
   @media screen and (max-width: 768px) {
     .ExpandedCard {
       top: 8rem;
-      height: 50%;
+      height: 60%;
       left: 25px;
-      width: 80%;
+      width: 90%;
     }
   }

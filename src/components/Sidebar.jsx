@@ -36,7 +36,7 @@ const Sidebar = () => {
     variants={sidebarVariants}
     animate={window.innerWidth<=768?`${expanded}`:''}
     >
-      {/* logo */}
+      
       <div className="logo">
         <span>
           Training & Placement 

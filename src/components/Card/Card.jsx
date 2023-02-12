@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from 'react'
 import "./Card.css";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
@@ -34,17 +34,11 @@ function CompactCard({ param, setExpanded }) {
       layoutId="expandableCard"
       onClick={setExpanded}
     >
-      <div className="radialBar">
-        <CircularProgressbar
-          value={param.barValue}
-          text={`${param.barValue}%`}
-        />
-        <span>{param.title}</span>
-      </div>
+      <h2>{param.title}</h2>
       <div className="detail">
         <Png />
-        <span>${param.value}</span>
-        <span>Last 2 years</span>
+        <span>{param.value}</span>
+        <span>Last 1 years</span>
       </div>
     </motion.div>
   );
@@ -52,10 +46,11 @@ function CompactCard({ param, setExpanded }) {
 
 // Expanded Card
 function ExpandedCard({ param, setExpanded }) {
+  
   const data = {
     options: {
       chart: {
-        type: "line",
+        type: 'bar',
         height: "auto",
       },
 
@@ -69,10 +64,6 @@ function ExpandedCard({ param, setExpanded }) {
         opacity: 0.35,
       },
 
-      fill: {
-        colors: ["#fff"],
-        type: "gradient",
-      },
       dataLabels: {
         enabled: false,
       },
@@ -81,23 +72,21 @@ function ExpandedCard({ param, setExpanded }) {
         colors: ["white"],
       },
       tooltip: {
-        x: {
-          format: "dd/MM/yy HH:mm",
-        },
+        
       },
       grid: {
         show: true,
       },
       xaxis: {
-        type: "datetime",
+        
         categories: [
-          "2018-09-19T00:00:00.000Z",
-          "2018-09-19T01:30:00.000Z",
-          "2018-09-19T02:30:00.000Z",
-          "2018-09-19T03:30:00.000Z",
-          "2018-09-19T04:30:00.000Z",
-          "2018-09-19T05:30:00.000Z",
-          "2018-09-19T06:30:00.000Z",
+         "CSE",
+         "ECE",
+         "MECH",
+         "ELEC",
+         "MME",
+         "CHEM",
+         "CIVIL",
         ],
       },
     },
@@ -107,21 +96,20 @@ function ExpandedCard({ param, setExpanded }) {
     <motion.div
       className="ExpandedCard"
       style={{
-        background: param.color.backGround,
         boxShadow: param.color.boxShadow,
+        background: param.color.backGround,
       }}
       layoutId="expandableCard"
     >
       <div style={{ alignSelf: "flex-end", cursor: "pointer", color: "white" }}>
         <UilTimes onClick={setExpanded} />
       </div>
-
         <span>{param.title}</span>
       <div className="chartContainer">
-        <Chart options={data.options} series={param.series} type="area" />
+        <Chart options={data.options} series={param.series} type={param.type}/>
       </div>
-      
-      <span>Last 24 hours</span>
+
+      <span>Last 2 years</span>
     </motion.div>
   );
 }

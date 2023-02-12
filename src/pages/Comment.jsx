@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
+import Table from '../components/Table/Table';
 function Comment() {
 
   
@@ -22,21 +23,16 @@ function Comment() {
     fetchData1()
   }, [])
    
-  const numbers = [analysisData["max_cse"],analysisData["max_ece"],analysisData["max_mech"],analysisData["max_elec"],analysisData["max_mme"],analysisData["max_civil"],analysisData["max_plan"],analysisData["max_arch"]];
-
+  const numbers = [analysisData["pac_cse"],analysisData["max_ece"],analysisData["max_mech"],analysisData["max_elec"],analysisData["max_mme"],analysisData["max_civil"],analysisData["max_plan"],analysisData["max_arch"]];
   return (
+    <>
     <div>
-      <h1>Hi</h1>
-      <div>
-      {numbers.map((number, index) => (
-        <p key={index}>{number}</p>
-      ))}
     </div>
-{/*   
-      <pre>{(analysisData["high_pac"])}</pre>
-      <pre>Data : {JSON.stringify(analysisData, null, 2)}</pre> */}
-    </div>
-  );
+    <div className="MainDash text-center p-xl-8 mt-1"  style={{width:"110%"}}>
+    <h1 className="mb-3">Recent Placed Data</h1>
+    <Table />
+  </div>
+  </>
+);
 }
-
 export default Comment;

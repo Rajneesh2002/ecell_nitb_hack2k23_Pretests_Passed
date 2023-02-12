@@ -5,14 +5,19 @@ import Sidebar from './components/Sidebar1'
 import Dashboard from './pages/Dashboard.jsx';
 import About from './pages/About.jsx';
 import Comment from './pages/Comment.jsx';
-import Product from './pages/Product.jsx';
-import ProductList from './pages/ProductList.jsx';
 import Analytics from './pages/Analytics.jsx';
-
+import image from "../src/images/image.png";
 const App = () => {
   return (
     <>
-    <h1>hii</h1>
+   <div style={{
+      backgroundImage: `url(${image})`, backgroundPosition: 'center',
+      backgroundSize: 'auto',
+      backgroundRepeat: 'no-repeat',
+      width: '100vw',
+      height: '100vh',
+      align:'centre'
+    }}>
     <BrowserRouter>
       <Sidebar>
         <Routes>
@@ -21,11 +26,10 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/comment" element={<Comment />} />
           <Route path="/analytics" element={<Analytics />} />
-          <Route path="/product" element={<Product />} />
-          <Route path="/productList" element={<ProductList />} />
         </Routes>
       </Sidebar>
     </BrowserRouter>
+    </div>
     </>
   );
 };

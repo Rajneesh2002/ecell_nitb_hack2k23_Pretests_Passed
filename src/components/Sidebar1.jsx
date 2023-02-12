@@ -22,11 +22,7 @@ const Sidebar = ({children}) => {
             name:"Dashboard",
             icon:<FaTh/>
         },
-        {
-            path:"/about",
-            name:"About",
-            icon:<FaUserAlt/>
-        },
+        
         {
             path:"/analytics",
             name:"Analytics",
@@ -38,17 +34,17 @@ const Sidebar = ({children}) => {
             icon:<FaCommentAlt/>
         },
         {
-            path:"/product",
+            path:"/about",
             name:"Profile",
-            icon:<FaShoppingBag/>
+            icon:<FaUserAlt/>
         },
        
     ]
     return (
-        <div className="container pk">
-           <div style={{width: isOpen ? "200px" : "50px"}} className="sidebar">
+        <div className="container">
+           <div style={{width: isOpen ? "400px" : "100px"}} className="sidebar">
                <div className="top_section">
-                   <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
+                   <h1 style={{ display: isOpen ? "block" : "none" ,}} className="logo" >    TPO MANIT </h1>
                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
                        <FaBars onClick={toggle}/>
                    </div>

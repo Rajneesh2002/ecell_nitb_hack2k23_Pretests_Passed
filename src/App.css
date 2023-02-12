@@ -1,4 +1,4 @@
-/* .App {
+ .App {
   text-align: center;
 }
 
@@ -60,29 +60,8 @@
   font-family: 'Inter', sans-serif;
 }
 
-.AppGlass {
-  display: grid;
- 
-  width: 97%;
-  background: var(--glass);
-  border-radius: 2rem;
-  gap: 16px;
-  grid-template-columns: 11rem auto 5rem;
-  overflow: hidden;
-}
 
-@media screen and (max-width: 1200px) {
-  .AppGlass{
-    grid-template-columns: 10% 50% auto;
-    overflow-y: scroll;
-  } 
-}
 
-@media screen and (max-width: 768px) {
-  .AppGlass{
-    grid-template-columns: 1fr;
-  } 
-} */
 .App {
   text-align: center;
 }
@@ -133,14 +112,15 @@
   padding-left: 0;
 }
 main{
-  width: 100%;
+ width:100%;
   padding: 20px;
+ 
 }
 .sidebar{
   background: #000;
   color: #fff;
   height: 100vh;
-  width: 200px;
+  width: 300px;
   transition: all 0.5s;
 }
 .top_section{

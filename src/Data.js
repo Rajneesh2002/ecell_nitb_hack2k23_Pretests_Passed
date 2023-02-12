@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react'
 
 import {
     UilEstate,
@@ -8,17 +9,40 @@ import {
     UilSignOutAlt,
   } from "@iconscout/react-unicons";
   // Analytics Cards imports
-  import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
+  import { UilUsdSquare,UilRupeeSign, UilMoneyWithdrawal } from "@iconscout/react-unicons";
   import { keyboard } from "@testing-library/user-event/dist/keyboard";
   
   // Recent Card Imports
-  import img1 from "./images/1.png";
-  import img2 from "./images/2.png";
-  import img3 from "./images/3.png";
-  
-  
+  const numbers=[1,2,3,4,5]
   //import data
+
+function AnalysisRes() {
+
   
+  const [analysisData, setAnalysisData] = useState({ });
+  
+  useEffect(() => {
+    const fetchData1 = async () => {
+      try {
+        const res = await fetch("http://127.0.0.1:5000/analysis")
+        if (!res.ok) {
+          throw new Error(`Error fetching data: ${res.statusText}`)
+        }
+        const data = await res.json()
+        setAnalysisData(data)
+        console.log('Data 1:', data)
+      } catch (error) {
+        console.error(error)
+      }
+    }
+    fetchData1()
+  }, [])
+   
+  return (
+    numbers[0]=10
+  )
+
+}
   // Sidebar Data
   export const SidebarData = [
     {
@@ -37,10 +61,7 @@ import {
       icon: UilChart,
       heading: 'Analytics'
     },
-    {
-      icon: UilPackage,
-      heading: 'About Us'
-    },
+    
   ];
   
   // Analytics Cards Data
@@ -53,11 +74,11 @@ import {
       },
       barValue: 70,
       value: "25,970",
-      png: UilUsdSquare,
+      png: UilRupeeSign,
       series: [
         {
           name: "sales",
-          data:[1,2,3,4,5,6,7],
+          data:numbers,
         },
       ],
     },
