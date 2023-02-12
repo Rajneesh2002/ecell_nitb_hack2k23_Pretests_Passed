@@ -19,14 +19,7 @@ const rows = [
   createData("Rajneesh", 18908421, "Google", "Placed"),
   createData("Rajneesh", 18908421, "Google", "Placed"),
   createData("Rajneesh", 18908421, "Google", "Placed"),
-  createData("Rajneesh", 18908421, "Google", "Placed"),
-  createData("Rajneesh", 18908421, "Google", "Placed"),
-  createData("Rajneesh", 18908421, "Google", "Placed"),
-  createData("Rajneesh", 18908421, "Google", "Placed"),
-  createData("Rajneesh", 18908421, "Google", "Placed"),
-  createData("Rajneesh", 18908421, "Google", "Placed"),
-  createData("Rajneesh", 18908421, "Google", "Placed"),
-];
+  ];
 
 
 const makeStyle=(status)=>{
@@ -54,13 +47,15 @@ const makeStyle=(status)=>{
 
 export default function BasicTable() {
   return (
+    
       <div className="Table">
       <h3>Recent Placements</h3>
         <TableContainer
           component={Paper}
-          style={{ boxShadow: "0px 13px 20px 0px #80808029" }}
+          style={{ boxShadow: "0px 13px 20px 0px #80808029",border:" 2px solid red", }}
         >
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          <Table sx={{ minWidth: 650 }}
+          style={{ color: "red" ,border:" 2px solid red",}} aria-label="simple table">
             <TableHead>
               <TableRow>
                 <TableCell>Student</TableCell>
@@ -70,11 +65,12 @@ export default function BasicTable() {
                 <TableCell align="left"></TableCell>
               </TableRow>
             </TableHead>
-            <TableBody style={{ color: "white" }}>
+            <TableBody style={{ color: "red" ,border:" 2px solid red",}}>
               {rows.map((row) => (
                 <TableRow
                   key={row.name}
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                  sx={{ "&:last-child td, &:last-child th": { border: 2 } }}
+                  style={{ color: "red" ,border:" 2px solid red",}}
                 >
                   <TableCell component="th" scope="row">
                     {row.name}
@@ -84,8 +80,7 @@ export default function BasicTable() {
                   <TableCell align="left">
                     <span className="status" style={makeStyle(row.status)}>{row.status}</span>
                   </TableCell>
-                  <TableCell align="left" className="Details">Details</TableCell>
-                </TableRow>
+                   </TableRow>
               ))}
             </TableBody>
           </Table>

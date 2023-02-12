@@ -1,10 +1,8 @@
 import React from 'react';
-
+import MainDash from '../components/MainDash/MainDash'
 const Analytics = () => {
     return (
-        <div>
-            <h1>Analytics page</h1>
-        </div>
+        <MainDash/>
     );
 };
 

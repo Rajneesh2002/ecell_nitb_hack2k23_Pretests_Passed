@@ -1,3 +1,4 @@
+
 import {
     UilEstate,
     UilClipboardAlt,
@@ -6,7 +7,6 @@ import {
     UilChart,
     UilSignOutAlt,
   } from "@iconscout/react-unicons";
-  
   // Analytics Cards imports
   import { UilUsdSquare, UilMoneyWithdrawal } from "@iconscout/react-unicons";
   import { keyboard } from "@testing-library/user-event/dist/keyboard";
@@ -15,6 +15,9 @@ import {
   import img1 from "./images/1.png";
   import img2 from "./images/2.png";
   import img3 from "./images/3.png";
+  
+  
+  //import data
   
   // Sidebar Data
   export const SidebarData = [
@@ -53,8 +56,8 @@ import {
       png: UilUsdSquare,
       series: [
         {
-          name: "Sales",
-          data: [31, 40, 28, 51, 42, 109, 100],
+          name: "sales",
+          data:[1,2,3,4,5,6,7],
         },
       ],
     },
