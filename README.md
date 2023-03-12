@@ -1,6 +1,6 @@
 # ecell_nitb_hack2k23_Pretests_Passed
 
-# Collaborators :
+## Collaborators :
 - Aniket Jain
 - Arin Jain
 - Rajneesh Jain
