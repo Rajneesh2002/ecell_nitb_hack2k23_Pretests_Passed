@@ -1,9 +1,9 @@
 # ecell_nitb_hack2k23_Pretests_Passed
 
 ## Collaborators :
-- Aniket Jain
+- Rajneesh Kushwaha
 - Arin Jain
-- Rajneesh Jain
+- Aniket Jain
 - Sanyam Jain
 
 ## Training and Placement Cell Management 
