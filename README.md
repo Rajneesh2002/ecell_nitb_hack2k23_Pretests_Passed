@@ -6,6 +6,8 @@
 - Rajneesh Jain
 - Sanyam Jain
 
+## Training and Placement cell Management 
+
 User Interface: The app has a clean and user-friendly interface that makes it easy to navigate and use. The use of React JS has enabled the development of dynamic UI components that enhance user experience.
 
 Functionality: The app is designed to streamline the process of managing training and placement activities in educational institutions. It provides a range of features such as student registration, resume building, job search, and interview scheduling.
