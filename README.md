@@ -1,10 +1,10 @@
 # ecell_nitb_hack2k23_Pretests_Passed
 
-#Collaborators :
-Aniket Jain
-Arin Jain
-Rajneesh Jain
-Sanyam Jain
+# Collaborators :
+- Aniket Jain
+- Arin Jain
+- Rajneesh Jain
+- Sanyam Jain
 
 User Interface: The app has a clean and user-friendly interface that makes it easy to navigate and use. The use of React JS has enabled the development of dynamic UI components that enhance user experience.
 
